@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Name</p>
+    <input type="text" id="name" name="name"><br>
+    <p>Gender</p>
+    <select id="Gender">
+        <option value=""></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select><br>
+    <p>Age</p>
+    <input type="number" id="age" name="age"><br><br>
+    <button onclick="submit()" >Submit</button><br>
+    <p id="p1"></p>
+
+</body>
+</html>
+<script>
+    function submit() {
+            var input = document.getElementById("age").value;
+             var p = document.getElementById("p1");
+             if(Number(input) > 18){
+                p.innerText="You can drive in India!";
+             }
+             else if(Number(input) < 18){
+                p.innerText="You can not drive in India!";
+             }
+             else {
+                 p.innerText="You are just old enough to drive in India!";
+             }
+    }
+</script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+        #container {
+            display : grid;
+            grid-template-columns: repeat (12, 1fr);
+            grid-template-rows: 100px 150px 150px 150px;
+            grid-gap: 20px;
+            grid-template-areas: 
+            "a a a a a a a a a a a a"
+            "b b b b b b b b b c c c"
+            "b b b b b b b b b d d d"
+            "b b b b b b b b b e e e";
+        }
+        /* #item {
+            width : 800px;
+            height : 800px;
+            boeder :1px solid red
+        } */
+        .box1 {
+            grid-area: a;
+            background-color: yellow;
+        }
+        .box2 {
+            grid-area: b;
+            background-color: red;
+            grid-column-gap: 40px;
+        }
+        .box3 {
+            grid-area: c;
+            background-color: greenyellow;
+        }
+        .box4 {
+            grid-area: d;
+            background-color: greenyellow;
+        }
+        .box5 {
+            grid-area: e;
+            background-color: greenyellow;
+        }
+        h1{
+            font-size: 40px;
+            margin-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p {
+            font-size: 25px;
+            color: grey;
+            margin-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        @media only screen and (min-width:0px) and (max-width:320px)
+        {
+            #container {
+            grid-template-columns: repeat (1, 1fr);
+            grid-template-rows: 100px 300px 150px 150px 150px;
+            grid-template-areas: 
+            "a a a a a a a a a a a a"
+            "b b b b b b b b b b b b"
+            "b b b b b b b b b b b b "
+            "c c c c c c c c c c c c "
+            "d d d d d d d d d d d d "
+            "e e e e e e e e e e e e "
+            }
+        }
+
+        @media only screen and (min-width:321px) and (max-width:720px)
+        {
+            #container {
+             grid-template-columns: repeat (3, 1fr);
+            grid-template-rows: 100px 300px 150px;
+                grid-template-areas: 
+            "a a a a a a a a a a a a"
+            "b b b b b b b b b b b b"
+            "b b b b b b b b b b b b "
+            "c c c c d d d d e e e e"
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- <div id =""></div> -->
+        <div class="box1">
+            <h1>Navigation</h1>
+        </div>
+        <div class="box2">
+            <p>LEFT BOX</p>
+        </div>
+        <div class="box3">
+            <p>RIGHT BOX1</p>
+        </div>
+        <div class="box4">
+            <p>RIGHT BOX2</p>
+        </div>
+        <div class="box5">
+            <p>RIGHT BOX3</p>
+        </div>  
+    </div>
+</body>
+</html>

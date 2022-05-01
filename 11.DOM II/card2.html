@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card2</title>
+    <style>
+        #container {
+              margin-left: 100px;
+        }                   
+        p {
+           padding-left : 20px;
+           font-family: Arial, Helvetica, sans-serif;
+           line-height: 20px;
+       }
+       h2 + p {
+          /* border : 1px solid red;    */
+          color: gray; 
+          height: 20px;
+          margin-top: 25px ;
+       }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+    
+    </div>
+    
+</body>
+</html>
+<script>
+   
+   var data = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+data.map(function(e){
+    var card = document.createElement("div")
+    card.style.width - "261px";
+    card.style.margin ="10px";
+    card.style.boxShadow - "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+    card.style.border = "1px solid rgb(192, 183, 183)"
+    var i =document.createElement("img");
+    i.setAttribute("src", e.imgUrl);
+    var name = document.createElement("p");
+    name.innerText = e.name;
+    var cost = document.createElement("div")
+    cost.style.display ="flex"
+    cost.style.justifyContent="space-around"
+    var disrate = document.createElement("h2");
+    disrate.innerText = e.price;
+    var rate = document.createElement("p");
+    rate.innerText = e.strikedOffPrice;
+    rate.style.textDecoration = "line-through";
+    cost.append(disrate,rate)
+    card.append(i,name,cost)
+    var cont = document.getElementById("container");
+    cont.style.display="flex";
+    cont.append(card)
+
+})
+
+</script>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var blackdata = [
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/Re-Shoot-Cake-09-A.jpg?tr=w-264,q-70",
+      name: "Black Forest Cake",
+      price: 513,
+      strikedoffprice: 860,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/luxuriant-black-forest-cake-a.jpg?tr=w-264,q-70",
+      name: "Daintey Black Forest Cake",
+      price: 699,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/dainty-black-forest-cake-9871060ca-A_0.jpg?tr=w-264,q-70",
+      name: " Black Forest Gateau",
+      price: 945,
+      strikedoffprice: 2099,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/germany-forest-cake-9954100ca-A.jpg?tr=w-264,q-70",
+      name: "Laxuriant Black Forest Cake",
+      price: 399,
+      strikedoffprice: 799,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/2018-02-13.jpg?tr=w-264,q-70",
+      name: "Rade Rose N Black Forest Cake ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/black-forest-pinata-cake-9890990ca-A.jpg?tr=w-264,q-70",
+      name: " Black Forest Pinta Cake",
+      price: 1440,
+      strikedoffprice: 3199,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/Re-Shoot-Cake-03-A.jpg?tr=w-264,q-70",
+      name: " Delatable Black Forest Cake ",
+      price: 1999,
+      strikedoffprice: 3199,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/lovingly-yours-12052017-A.jpg?tr=w-264,q-70",
+      name: "Black Forest Rose cake Combo Cake ",
+      price: 769,
+      strikedoffprice: 1099,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/Re-Shoot-Cake-04-B.jpg?tr=w-264,q-70",
+      name: "Heart shape  Black Forest Cake  ",
+      price: 1299,
+      strikedoffprice: 1440,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/Re-Shoot-Cake-09-A.jpg?tr=w-264,q-70",
+      name: "Black Forest Cake",
+      price: "Rs.513",
+      strikedoffprice: "Rs860",
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/Blackforest-cake-2Kg-eggless-A_0_0.jpg?tr=w-264,q-70",
+      name: "Classic Black Forest Cake",
+      price: 699,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/15-A_0.jpg?tr=w-264,q-70",
+      name: " Cutness on to Black Forest",
+      price: 945,
+      strikedoffprice: 2099,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/germany-forest-cake-9954100ca-A.jpg?tr=w-264,q-70",
+      name: "Laxuriant Black Forest Cake",
+      price: 399,
+      strikedoffprice: 799,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/2018-02-13.jpg?tr=w-264,q-70",
+      name: "Rade Rose N Black Forest Cake ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/black-forest-pinata-cake-9890990ca-A.jpg?tr=w-264,q-70",
+      name: " Black Forest Pinta Cake",
+      price: 1440,
+      strikedoffprice: 3199,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/Re-Shoot-Cake-03-A.jpg?tr=w-264,q-70",
+      name: " Delatable Black Forest Cake ",
+      price: 1999,
+      strikedoffprice: 3199,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/lovingly-yours-12052017-A.jpg?tr=w-264,q-70",
+      name: "Black Forest Rose cake Combo Cake ",
+      price: 769,
+      strikedoffprice: 1099,
+    },
+    {
+      image_url:
+        "https://imgcdn.floweraura.com/Re-Shoot-Cake-04-B.jpg?tr=w-264,q-70",
+      name: "Heart shape  Black Forest Cake  ",
+      price: 1299,
+      strikedoffprice: 1440,
+    },
+    
+  ];
+
+  localStorage.setItem("blackdata", JSON.stringify(blackdata));
+
+
+//   var butterscotchData = [
+//   {
+//       image_url:
+//         "https://imgcdn.floweraura.com/Re-Shoot-Cake-09-A.jpg?tr=w-264,q-70",
+//       name: "Black Forest Cake",
+//       price: "Rs.513",
+//       strikedoffprice: "Rs860",
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/luxuriant-black-forest-cake-a.jpg?tr=w-264,q-70",
+//       name: "Daintey Black Forest Cake",
+//       price: 699,
+//       strikedoffprice: 999,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/dainty-black-forest-cake-9871060ca-A_0.jpg?tr=w-264,q-70",
+//       name: " Black Forest Gateau",
+//       price: 945,
+//       strikedoffprice: 2099,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/germany-forest-cake-9954100ca-A.jpg?tr=w-264,q-70",
+//       name: "Laxuriant Black Forest Cake",
+//       price: 399,
+//       strikedoffprice: 799,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/2018-02-13.jpg?tr=w-264,q-70",
+//       name: "Rade Rose N Black Forest Cake ",
+//       price: 1620,
+//       strikedoffprice: 3599,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/black-forest-pinata-cake-9890990ca-A.jpg?tr=w-264,q-70",
+//       name: " Black Forest Pinta Cake",
+//       price: 1440,
+//       strikedoffprice: 3199,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/Re-Shoot-Cake-03-A.jpg?tr=w-264,q-70",
+//       name: " Delatable Black Forest Cake ",
+//       price: 1999,
+//       strikedoffprice: 3199,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/lovingly-yours-12052017-A.jpg?tr=w-264,q-70",
+//       name: "Black Forest Rose cake Combo Cake ",
+//       price: 769,
+//       strikedoffprice: 1099,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/Re-Shoot-Cake-04-B.jpg?tr=w-264,q-70",
+//       name: "Heart shape  Black Forest Cake  ",
+//       price: 1299,
+//       strikedoffprice: 1440,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/Re-Shoot-Cake-09-A.jpg?tr=w-264,q-70",
+//       name: "Black Forest Cake",
+//       price: "Rs.513",
+//       strikedoffprice: "Rs860",
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/Blackforest-cake-2Kg-eggless-A_0_0.jpg?tr=w-264,q-70",
+//       name: "Classic Black Forest Cake",
+//       price: 699,
+//       strikedoffprice: 999,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/15-A_0.jpg?tr=w-264,q-70",
+//       name: " Cutness on to Black Forest",
+//       price: 945,
+//       strikedoffprice: 2099,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/germany-forest-cake-9954100ca-A.jpg?tr=w-264,q-70",
+//       name: "Laxuriant Black Forest Cake",
+//       price: 399,
+//       strikedoffprice: 799,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/2018-02-13.jpg?tr=w-264,q-70",
+//       name: "Rade Rose N Black Forest Cake ",
+//       price: 1620,
+//       strikedoffprice: 3599,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/black-forest-pinata-cake-9890990ca-A.jpg?tr=w-264,q-70",
+//       name: " Black Forest Pinta Cake",
+//       price: 1440,
+//       strikedoffprice: 3199,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/Re-Shoot-Cake-03-A.jpg?tr=w-264,q-70",
+//       name: " Delatable Black Forest Cake ",
+//       price: 1999,
+//       strikedoffprice: 3199,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/lovingly-yours-12052017-A.jpg?tr=w-264,q-70",
+//       name: "Black Forest Rose cake Combo Cake ",
+//       price: 769,
+//       strikedoffprice: 1099,
+//     },
+//     {
+//       image_url:
+//         "https://imgcdn.floweraura.com/Re-Shoot-Cake-04-B.jpg?tr=w-264,q-70",
+//       name: "Heart shape  Black Forest Cake  ",
+//       price: 1299,
+//       strikedoffprice: 1440,
+//     },
+//   ];
+</script>

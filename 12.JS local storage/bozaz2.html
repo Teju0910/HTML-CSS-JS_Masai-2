@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+        }
+        tr,th,td {
+            border-bottom-left-radius: 1px solid rgb(54, 45, 45);
+            padding: 15px;
+            margin: 10px;
+            width: 100px;
+            /* border-bottom: 1px solid gray; */
+    
+        }
+        form {
+            width: 50%;
+            border: 1px solid red;
+            margin: 20px 200px 0 50px;
+        
+        }
+        h1 {
+            color:cadetblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        select ,input, textarea {
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            width: 95%;
+            border-radius: 5px;
+        }
+        #add {
+            color :white;
+            background-color: rgb(61, 115, 216);
+            padding: 7px 20px 7px 20px;
+            border :3px solid rgb(159, 210, 241);
+            margin-top :5px;
+            border-radius: 5px;
+            width: 100px;
+        }
+        table {
+            border-top: 1px solid gray
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+        <form>
+            <h1>Add Product</h1>
+            <hr>
+            <p>Category</p>
+                <select id="category">
+                    <option value="e">Electronics</option>
+                    <option value="f">Furniture</option>
+                    <option value="b">Books</option>
+                    <option value="h">Home appliance</option>
+                     </select>
+            <p>Title</p>
+                <input id="title" type="text" placeholder="some new" /><br>
+            <p>Description</p>
+                <textarea name="" cols="30" id="des" type="text" placeholder="home"></textarea><br>
+            <p>Price</p>    
+                <input id="price" type="number" placeholder="price" /><br> 
+                <input type="submit" value="Add" id="add" />
+        </form></div>
+        <div>
+        <h1>Product Info</h1>
+        <table>
+            <tbody>
+                <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",productAdd);
+    var proArr = JSON.parse(localStorage.getItem("savearr")) || [];
+//    window.addEventListener("load", function() {
+       createTable(proArr);
+//    })
+   
+    function productAdd(event){
+        event.preventDefault();
+        var has = td0();
+        var cat = document.querySelector("#category").value;
+        var tit = document.querySelector("#title").value;
+        var des = document.querySelector("#des").value;
+        var price = document.querySelector("#price").value;
+
+         function td0.forEach(function(el){
+            console.log(el+1)
+        })
+        console.log(cat,tit,des,price);
+
+        var prolist = {
+            procount : "",
+            proCat : cat,
+            proTit : tit,
+            proDes : des,
+            proprice : price,
+        };
+
+        proArr.push(prolist);
+        localStorage.setItem("savearr", JSON.stringify(proArr));
+        createTable(proArr);
+        // console.log(proArr)
+    }
+
+    function createTable(proArr) {
+        document.querySelector("tbody").textContent="";
+       
+        proArr.map(function (ele,index){    
+        var tr = document.createElement("tr");
+
+        var td0 = document.createElement("td");
+       
+        var td1 = document.createElement("td");
+        td1.textContent = ele.proCat;
+        var td2 = document.createElement("td");
+        td1.textContent = ele.proTit;
+        var td3 = document.createElement("td");
+        td3.textContent = ele.proDes;
+        var td4 = document.createElement("td");
+        td4.textContent = ele.proprice;
+
+        tr.append(td0, td1, td2, td3, td4);
+        document.querySelector("tbody").append(tr);
+    });
+    }
+    </script>

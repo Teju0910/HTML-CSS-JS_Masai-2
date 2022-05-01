@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="1home.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box2">
+           
+        </div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>
+
+<script>
+  
+
+
+ 
+    var data = JSON.parse(localStorage.getItem("cakeadded"));
+
+    
+    console.log(data)
+    var maindiv = document.createElement("div");
+    var image = document.createElement("div");
+    var imageurl = document.createElement("img");
+    var textdiv = document.createElement("div");
+
+    var imageurl = document.createElement("img");
+     imageurl.setAttribute("src",data.image_url)
+
+var namee = document.createElement("h4")
+namee.textContent= data.name;
+
+
+var rate = document.createElement("h4")
+rate.textContent="Real Price - " +" " +data.price;
+
+var Qty = document.createElement("h4")
+Qty.textContent=  "Price after Discount - " +" " + data.strikedoffprice;
+
+var add = document.createElement("button");
+        add.innerHTML = "PLACE ORDER";
+        add.style.marginTop="50px";
+        add.addEventListener("click",function(){
+            window.location.href = "payment.html";
+        })
+
+
+
+// var del = document.querySelector("#delete")
+// del.innerHTML = `<i class="fas fa-trash-alt"></i>`
+
+        image.append(imageurl); 
+        textdiv.append(namee,rate,Qty,add);
+        console.log(data.name)
+        console.log(textdiv.textContent)
+
+        maindiv.append(image,textdiv);
+        document.querySelector(".box2").append(maindiv);
+
+
+   
+
+
+    // document.querySelector(".promobutton").addEventListener("click", function(){
+    //         if(promo.value == "masai30"){
+    //             count = Math.floor((count*70)/100);
+    //             checkOut.textContent = "Total Cost" + " = ₹." + count + " " + "Qty = " + count1;
+    //         }
+    //         else{
+    //             alert("error");
+    //         }
+    // })
+
+    // document.querySelector(".box3>button").addEventListener("click", function(){
+    //         alert("Thank you for purchasing");
+    //         window.location.href = "payment.html";
+    // })
+
+</script>

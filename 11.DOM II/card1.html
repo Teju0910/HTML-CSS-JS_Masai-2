@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 180px;
+            border : 1px solid;
+            display: flex;
+            margin : auto;
+        }
+        img {
+            align-items: left;
+        }
+        button {
+            background-color: rgb(0, 123,255);
+            color: white;
+            border: 0;
+            height: 30px;
+            border-radius: 5px;
+            margin-top: 7px;
+        }
+        h4 , p , button{
+            margin-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="id2"></div>
+        <div id="id1"> </div>
+    </div>
+    
+</body>
+</html>
+<script>
+
+    var image =document.createElement("img");
+    image.setAttribute("src","https://via.placeholder.com/150x180")
+
+    var head4 = document.createElement("h4");
+    head4.textContent = "Alice Liddel";
+
+    var para = document.createElement("p");
+    para.textContent = "Alicie is a freelance we beveloper and deleveloper in Londan.She is speciallized in CSS,HTML, JavaScript etc.";
+
+    var button = document.createElement("button");
+    button.textContent = "View Profile"
+
+    document.querySelector("#id2").append(image)
+    document.querySelector("#id1").append(head4,para,button)
+
+</script>

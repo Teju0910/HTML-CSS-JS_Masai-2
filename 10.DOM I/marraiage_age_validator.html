@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Name</p>
+    <input type="text" id="name" name="name"><br>
+    <p>Gender</p>
+    <select id="Gender">
+        <option value=""></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select><br>
+    <p>Birth Year</p>
+    <input type="number" id="bYear" name="bYear"><br><br>
+    <button onclick="submit()" >Submit</button>
+
+</body>
+</html>
+<script>
+    function submit() {
+            var input = document.getElementById("bYear").value;
+             
+             if(Number(input)<2003){
+                alert("get married ");
+             }
+             else {
+                alert(" Not get married ");
+             }
+    }
+</script>

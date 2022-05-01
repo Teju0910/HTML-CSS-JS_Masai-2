@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Amazon Sign in</title>
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+        .image {
+            height: 90px;
+            width: 200px;
+            margin: auto;
+        }
+        .container {
+            height: 380px;
+            width: 25%;
+            margin: auto;
+            margin-top: 1%;
+            border: 1px solid transparent;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border-radius: 5px;
+        }
+        h1 {
+            font-weight: 500;
+            padding-left: 5%;
+            font-size: 30px;
+        }
+        form {
+            padding-left: 5%;
+        }
+        input {
+            width: 90%;
+            height: 25px;
+            margin-top: 2%;
+        }
+        input[type="submit"]{
+            margin-top: 5%;
+            width: 93%;
+            height: 35px;
+            background-color: #46afc2;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        p {
+            padding-left: 5%;
+        }
+        button {
+            margin-left: 5%;
+            width: 88%;
+            height: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="container">
+        <div>
+            <h1>Sign-In</h1>
+        </div>
+        <div>
+            <form>
+                <label><b>Email</b></label>
+                <input class="email" type="text">
+                <br><br>
+                <label><b>Password</b></label>
+                <input class="passwor" type="password" placeholder="At least 6 Characters">
+                <br><br>
+                <input type="submit" value="Sign in">
+            </form>
+        </div>
+        <div class="signupOption">
+            <p>New?</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", addDetails);
+
+    function addDetails(event){
+        event.preventDefault();
+        var email = document.querySelector(".email").value;
+        
+        var passwor = document.querySelector(".passwor").value;
+
+        var userdata = JSON.parse(localStorage.getItem("userDatabase"));
+        var flag = 0;
+
+        if(email == "admin" && passwor == "admin"){
+            window.location.href = "adminPage.html";
+        }
+        else{
+            for(var i=0; i<userdata.length; i++){
+                if((email == userdata[i].email) && (passwor == userdata[i].password)){
+                    window.location.href = "nav.html";
+                    flag = 1;
+                }
+            }
+            if(flag == 1){
+                alert("Login Successful");
+            }
+            else{
+                alert("Invalid Email or Password");
+            }
+        }
+    }
+
+    var tosignUp = document.createElement("button");
+    tosignUp.textContent = "Create your Account";
+    tosignUp.addEventListener("click", function(){
+        window.location.href = "signup page.html";
+    });
+    document.querySelector(".signupOption").append(tosignUp);
+</script>
